@@ -1,0 +1,33 @@
+
+.header {
+
+	h1 {
+		margin: 0;
+		padding: 25px 0;
+		text-align: center;
+        line-height: 0;
+	}
+
+    a {
+
+    	img {
+
+            max-width: 280px;
+            max-height: 89px;
+            height: auto;
+            width: auto;
+
+            @include mq($from: tablet) {
+                max-height: 99px;
+            }
+
+    	}
+
+        &, img {
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+    }
+
+}

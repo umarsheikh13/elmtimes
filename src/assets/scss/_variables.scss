@@ -1,0 +1,38 @@
+
+// Breakpoints
+
+$mq-breakpoints: (
+    mobile: 320px,
+    tablet: 740px,
+    desktop: 980px,
+    wide: 1300px
+);
+
+// Colours
+
+$color-white: #fff;
+$color-black: #000;
+$color-grey-dark: #333;
+$color-grey-light: #ccc;
+$theme: (
+    light: $theme,
+    standard: darken($theme, 5%),
+    dark: darken($theme, 10%)
+);
+
+// Structure
+
+$sidebar-width: 260px;
+
+// Fonts
+
+$weather-font: 'ArtillWeather';
+$font-stack-default: 'Open Sans', Helvetica, sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-color-default: $color-white;
+
+// Animations and transitions
+
+$transition-speed: 0.5s;

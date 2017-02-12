@@ -1,0 +1,52 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+
+    font-size: 67.5%;
+
+    @include mq($from: tablet) {
+        font-size: 62.5%;
+    }
+
+}
+
+body {
+    @include pxrem(font-size, 14px);
+    font-family: $font-stack-default;
+    font-weight: $font-weight-regular;
+    line-height: 1.5;
+    color: $font-color-default;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $font-weight-regular;
+}
+
+a {
+    transition: $transition-speed;
+    text-decoration: none;
+}
+
+.video {
+
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+
+    iframe,
+    object,
+    embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+}

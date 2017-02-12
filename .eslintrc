@@ -1,0 +1,21 @@
+{
+    "extends": "airbnb",
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "func-names": [
+            "error",
+            "never"
+        ],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/react-in-jsx-scope": "off",
+        "react/no-array-index-key": "off",
+        "global-require": "off",
+        "import/no-dynamic-require": "off",
+        "jsx-a11y/no-static-element-interactions": "off"
+    },
+    "globals": {
+        "vars": true
+    }
+}

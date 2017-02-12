@@ -1,0 +1,8 @@
+
+.content {
+
+    @include mq($from: tablet) {
+        margin-bottom: 70px;
+    }
+
+}

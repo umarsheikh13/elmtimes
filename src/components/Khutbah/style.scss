@@ -1,0 +1,24 @@
+@import '~sass-mq/mq';
+@import '../../assets/scss/variables';
+
+.khutbah {
+
+    transition: $transition-speed;
+    text-align: center;
+    padding: 20px;
+
+    &__title {
+        margin: 0 0 15px 0;
+    }
+
+    @include mq($from: tablet) {
+
+        opacity: 0.5;
+
+        &:hover, &.active {
+            opacity: 1;
+        }
+
+    }
+
+}

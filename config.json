@@ -1,0 +1,21 @@
+{
+    "title": "ELM Times",
+    "tagline": "Unofficial Website for East London Mosque Prayer Times",
+    "description": "Provides a quick and easy way to view the current day's prayer times for East London Mosque.",
+    "keywords": "east london mosque, east london masjid, east london, mosque, masjid, london, prayer times, prayer, salah",
+    "domain": "elmtimes.com",
+    "path": "/",
+    "tips": [
+        "Save to your mobile homescreen",
+        "Click/tap times to change time format",
+        "Website code now on GitHub"
+    ],
+    "color": "#95112d",
+    "latitude": 51.517383,
+    "longitude": -0.065015,
+    "gaid": "UA-55211110-1",
+    "owmapikey": "631c50768d51fc9922b171cd00c71cde",
+    "channelid": "UCvLvAfXrrWkWITIAIfrwOtQ",
+    "ytapikey": "AIzaSyAMTMaHNGZgyoUDy6HDgncHHFThrWkShyo",
+    "ELM": true
+}

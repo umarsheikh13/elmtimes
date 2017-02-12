@@ -1,0 +1,15 @@
+
+.wrapper {
+
+    background-color: map-get($theme, light);
+
+    @include mq($from: tablet) {
+        position: fixed;
+        width: $sidebar-width;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        overflow: auto;
+    }
+
+}
