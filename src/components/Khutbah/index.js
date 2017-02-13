@@ -25,7 +25,7 @@ class Khutbah extends preact.Component {
    * @return {void}
    */
   getYouTubeVideo() {
-    const endpoint = `https://www.googleapis.com/youtube/v3/search?key=${Config.ytapikey}&channelId=${Config.channelid}&part=snippet,id&order=date&maxResults=5`;
+    const endpoint = `https://www.googleapis.com/youtube/v3/search?key=${Config.ytapikey}&channelId=${Config.channelid}&part=snippet,id&order=date&maxResults=5&${Helpers.cacheBust()}`;
     const cachedTitle = Helpers.storageGet('video_title');
     const cachedVideo = Helpers.storageGet('video_id');
 

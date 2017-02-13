@@ -153,7 +153,7 @@ class PrayerTimes extends preact.Component {
     const month = date.getMonth() + 1;
     const day = date.getDate();
 
-    Papa.parse(`${window.location.href}assets/timetables/${date.getFullYear()}.csv`, {
+    Papa.parse(`${window.location.href}assets/timetables/${date.getFullYear()}.csv?${Helpers.cacheBust()}`, {
       download: true,
       complete(results) {
         results.data.forEach((item) => {

@@ -81,6 +81,16 @@ export default {
     const g = d.getElementsByTagName('body')[0];
     const x = w.innerWidth || e.clientWidth || g.clientWidth;
     return width <= x;
+  },
+
+  /**
+   * Creates a hash based on time type
+   * @param {str} type The time for the cache string
+   * @return {int}     The cache busting string
+   */
+  cacheBust(type = 'daily') {
+    const date = new Date();
+    return `${date.getFullYear()}${date.getMonth()}${date.getDate()}${(type === 'hourly') ? date.getHours() : ''}`;
   }
 
 };
