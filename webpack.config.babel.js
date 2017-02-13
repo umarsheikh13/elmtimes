@@ -29,7 +29,7 @@ module.exports = {
   output: {
     path: __dirname,
     publicPath: PageInfo.path,
-    filename: 'js/bundle.[hash].js',
+    filename: 'js/bundle.[hash].js'
   },
   module: {
     rules: [
@@ -41,116 +41,107 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                minimize: isProduction,
-              },
+                minimize: isProduction
+              }
             },
             {
               loader: 'postcss-loader',
               options: {
                 plugins: () => [
                   require('autoprefixer')({
-                    browsers: '> 5%',
-                  }),
-                ],
-              },
+                    browsers: '> 5%'
+                  })
+                ]
+              }
             },
             'sass-loader',
             {
               loader: '@epegzz/sass-vars-loader',
               options: {
                 vars: {
-                  theme: PageInfo.color,
-                },
-              },
-            },
-          ],
-        }),
+                  theme: PageInfo.color
+                }
+              }
+            }
+          ]
+        })
       },
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader?presets[]=es2015',
+        loader: 'babel-loader?presets[]=es2015'
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
           {
-            loader: 'file-loader?hash=sha512&digest=hex&name=img/[hash].[ext]',
+            loader: 'file-loader?hash=sha512&digest=hex&name=img/[hash].[ext]'
           },
           {
             loader: 'image-webpack-loader',
             options: {
               gifsicle: {
-                interlaced: true,
+                interlaced: true
               },
               mozjpeg: {
-                quality: 65,
+                quality: 65
               },
               pngquant: {
                 quality: '65-90',
-                speed: 4,
+                speed: 4
               },
               svgo: {
                 plugins: [
                   {
-                    removeViewBox: false,
+                    removeViewBox: false
                   },
                   {
-                    removeEmptyAttrs: false,
-                  },
-                ],
-              },
-            },
-          },
-        ],
+                    removeEmptyAttrs: false
+                  }
+                ]
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: 'file-loader?name=fonts/[hash].[ext]',
-      },
-      {
-        test: /\.csv$/,
-        loader: 'csv-loader',
-        options: {
-          dynamicTyping: true,
-          header: false,
-          skipEmptyLines: true,
-        },
-      },
-    ],
+        loader: 'file-loader?name=fonts/[hash].[ext]'
+      }
+    ]
   },
   plugins: [
     new CleanWebpackPlugin(['css', 'js', 'img', 'fonts'], {
       root: __dirname,
       verbose: true,
-      dry: false,
+      dry: false
     }),
     new ExtractTextPlugin({
       filename: 'css/bundle.[hash].css',
       disable: false,
-      allChunks: true,
+      allChunks: true
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       inject: true,
       template: `${srcDir}/index.html`,
-      page: PageInfo,
+      page: PageInfo
     }),
     new ScriptExtHtmlWebpackPlugin({
-      async: /bundle\.([0-9a-zA-Z])+\.js/,
+      async: /bundle\.([0-9a-zA-Z])+\.js/
     }),
     new WebPack.optimize.UglifyJsPlugin({
       minimize: isProduction,
       compress: {
-        warnings: false,
+        warnings: false
       },
     }),
     new WebPack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
       vars: JSON.stringify({
         logos: dirs.logos,
-        slides: dirs.slides,
-      }),
-    }),
-  ],
+        slides: dirs.slides
+      })
+    })
+  ]
 };

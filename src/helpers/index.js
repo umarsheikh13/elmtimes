@@ -38,7 +38,7 @@ export default {
   /**
    * Gets an item from localStorage
    * @param  {str}   key The key to retrieve
-   * @return {mixed}   The value if exists
+   * @return {mixed}     The value if exists
    */
   storageGet(key) {
     if (this.storageAvailable()) {
@@ -69,6 +69,11 @@ export default {
     }
   },
 
+  /**
+   * Tests to see if viewport within the specified width
+   * @param {int} width The viewport width to Check
+   * @return {bool}
+   */
   mq(width) {
     const w = window;
     const d = document;
@@ -76,6 +81,6 @@ export default {
     const g = d.getElementsByTagName('body')[0];
     const x = w.innerWidth || e.clientWidth || g.clientWidth;
     return width <= x;
-  },
+  }
 
 };

@@ -9,7 +9,7 @@ class Weather extends preact.Component {
     super();
     this.state = {
       temp: null,
-      icon: null,
+      icon: null
     };
   }
 
@@ -33,7 +33,7 @@ class Weather extends preact.Component {
     if (cachedTemp) {
       this.setState({
         temp: cachedTemp,
-        cond: cachedCond,
+        cond: cachedCond
       });
     } else {
       // Get weather from API

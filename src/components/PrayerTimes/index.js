@@ -1,4 +1,5 @@
 import preact from 'preact';
+import Papa from 'papaparse';
 import Helpers from '../../helpers';
 import './style.scss';
 
@@ -17,45 +18,45 @@ class PrayerTimes extends preact.Component {
           name: 'fajr',
           label: 'Fajr',
           meridiem: 'am',
-          index: [2, 3],
+          index: [2, 3]
         },
         {
           name: 'sunrise',
           label: 'Sunrise',
           meridiem: 'am',
-          index: [4],
+          index: [4]
         },
         {
           name: 'zuhr',
           label: 'Dhuhr',
           meridiem: 'ampm',
-          index: [5, 6],
+          index: [5, 6]
         },
         {
           name: 'asr',
           label: 'Asr 1',
           meridiem: 'pm',
-          index: [7, 9],
+          index: [7, 9]
         },
         {
           name: 'asr2',
           label: 'Asr 2',
           meridiem: 'pm',
-          index: [8],
+          index: [8]
         },
         {
           name: 'maghrib',
           label: 'Maghrib',
           meridiem: 'pm',
-          index: [10, 11],
+          index: [10, 11]
         },
         {
           name: 'isha',
           label: 'Isha',
           meridiem: 'pm',
-          index: [12, 13],
-        },
-      ],
+          index: [12, 13]
+        }
+      ]
     };
   }
 
@@ -112,7 +113,7 @@ class PrayerTimes extends preact.Component {
           date.getDate(),
           hourTwenty,
           minutes,
-          date.getSeconds(),
+          date.getSeconds()
         );
 
         if (ii === 0) {
@@ -149,13 +150,17 @@ class PrayerTimes extends preact.Component {
   setPrayerTimes() {
     const self = this;
     const date = new Date();
-    const timetable = require(`../../../assets/timetables/${date.getFullYear()}.csv`);
     const month = date.getMonth() + 1;
     const day = date.getDate();
 
-    timetable.forEach((item) => {
-      if (month === item[0] && day === item[1]) {
-        self.setPrayertTime(item);
+    Papa.parse(`${window.location.href}assets/timetables/${date.getFullYear()}.csv`, {
+      download: true,
+      complete(results) {
+        results.data.forEach((item) => {
+          if (month == item[0] && day == item[1]) {
+            self.setPrayertTime(item);
+          }
+        });
       }
     });
   }

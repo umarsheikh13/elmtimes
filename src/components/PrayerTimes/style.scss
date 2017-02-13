@@ -1,3 +1,4 @@
+@import '~sass-mq/mq';
 @import '../../assets/scss/variables';
 @import '../../assets/scss/mixins';
 
@@ -43,10 +44,6 @@
 
     }
 
-    &:hover tbody tr span {
-        opacity: 1;
-    }
-
     &__start, &__jamaah {
         text-transform: lowercase;
     }
@@ -65,6 +62,14 @@
     &__jamaah {
         background-color: map-get($theme, light);
         border-top: 1px solid map-get($theme, dark);
+    }
+
+    @include mq($from: tablet) {
+
+        &:hover tbody tr span {
+            opacity: 1;
+        }
+
     }
 
 }

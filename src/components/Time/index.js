@@ -10,7 +10,7 @@ class Time extends preact.Component {
       time: '00.00',
       date: '',
       timer: null,
-      interval: 1000 * 60,
+      interval: 1000 * 60
     };
   }
 
@@ -57,7 +57,7 @@ class Time extends preact.Component {
       'September',
       'October',
       'November',
-      'December',
+      'December'
     ];
 
     this.setState({

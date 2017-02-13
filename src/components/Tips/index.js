@@ -9,7 +9,7 @@ class Tips extends preact.Component {
       timer: null,
       interval: 4000,
       tip: 0,
-      tips: Config.tips,
+      tips: Config.tips
     };
   }
 

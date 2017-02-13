@@ -10,7 +10,7 @@ class Slideshow extends preact.Component {
       timer: null,
       slides: vars.slides,
       slide: 0,
-      interval: 4000,
+      interval: 4000
     };
   }
 

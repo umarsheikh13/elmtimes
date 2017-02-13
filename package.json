@@ -5,6 +5,7 @@
   "main": "index.html",
   "dependencies": {
     "normalize.css": "^5.0.0",
+    "papaparse": "^4.1.4",
     "preact": "^7.1.0"
   },
   "devDependencies": {

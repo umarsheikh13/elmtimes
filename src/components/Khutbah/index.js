@@ -10,7 +10,7 @@ class Khutbah extends preact.Component {
     this.state = {
       title: null,
       video: null,
-      entered: false,
+      entered: false
     };
   }
 
@@ -34,7 +34,7 @@ class Khutbah extends preact.Component {
     if (cachedTitle) {
       this.setState({
         title: cachedTitle,
-        video: cachedVideo,
+        video: cachedVideo
       });
     } else {
       // Get latest video from API
