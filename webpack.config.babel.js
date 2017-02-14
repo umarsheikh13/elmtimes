@@ -114,7 +114,7 @@ module.exports = {
     new CleanWebpackPlugin(['css', 'js', 'img', 'fonts'], {
       root: __dirname,
       verbose: true,
-      dry: false
+      dry: !isProduction
     }),
     new ExtractTextPlugin({
       filename: 'css/bundle.[hash].css',

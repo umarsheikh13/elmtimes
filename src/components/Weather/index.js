@@ -95,7 +95,7 @@ class Weather extends preact.Component {
 
   render(props, state) {
     return (
-      <div className="weather__inner">
+      <div className={`weather__inner${((state.temp) ? ' active' : '')}`}>
         <span className="weather__temp">{state.temp}</span>
         <span className="weather__icon">{state.cond}</span>
       </div>

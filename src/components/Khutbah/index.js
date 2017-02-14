@@ -54,7 +54,11 @@ class Khutbah extends preact.Component {
           if (Config.ELM) {
             title = '';
             videos.forEach((ytVideo) => {
-              if ((/khutbah/i).test(ytVideo.snippet.title) && title === '') {
+              if (
+                  (/khutbah/i).test(ytVideo.snippet.title) &&
+                  !(/bangla/i).test(ytVideo.snippet.title) &&
+                  title === ''
+                ) {
                 title = ytVideo.snippet.title.match(/([^|]*)$/)[0];
                 video = ytVideo.id.videoId;
               }

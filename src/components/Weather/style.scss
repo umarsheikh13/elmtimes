@@ -41,22 +41,30 @@
 
     }
 
-    @include mq($from: tablet) {
+    &__inner {
 
-        background: linear-gradient(45deg, transparent 50%, $color-grey-dark 100%);
-        text-align: right;
-        height: 400px;
-        width: 400px;
-        top: 0;
-        right: 0;
+        display: none;
 
-        &__inner {
+        &.active {
+            display: block;
+        }
+
+        @include mq($from: tablet) {
             transition: $transition-speed;
             height: 200px;
             width: 200px;
             margin-left: auto;
         }
 
+    }
+
+    @include mq($from: tablet) {
+        background: linear-gradient(45deg, transparent 50%, $color-grey-dark 100%);
+        text-align: right;
+        height: 400px;
+        width: 400px;
+        top: 0;
+        right: 0;
     }
 
 }
