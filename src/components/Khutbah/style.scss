@@ -14,6 +14,7 @@
     @include mq($from: tablet) {
 
         opacity: 0.5;
+        padding-bottom: 0;
 
         &:hover, &.active {
             opacity: 1;
