@@ -4,7 +4,8 @@
 @import 'fonts';
 @import 'mixins';
 @import 'global';
-@import 'modules/wrapper';
-@import 'modules/header';
-@import 'modules/content';
-@import 'modules/footer';
+@import 'theme';
+@import 'structure/wrapper';
+@import 'structure/header';
+@import 'structure/content';
+@import 'structure/footer';

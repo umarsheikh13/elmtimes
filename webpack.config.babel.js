@@ -59,7 +59,8 @@ module.exports = {
               loader: '@epegzz/sass-vars-loader',
               options: {
                 vars: {
-                  theme: PageInfo.color
+                  theme_primary: PageInfo.primarycolor,
+                  theme_secondary: PageInfo.secondarycolor || 'none'
                 }
               }
             }

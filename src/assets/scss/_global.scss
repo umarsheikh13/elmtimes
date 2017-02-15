@@ -15,7 +15,6 @@ html {
 
 body {
     @include pxrem(font-size, 14px);
-    background-color: map-get($theme, light);
     font-family: $font-stack-default;
     font-weight: $font-weight-regular;
     line-height: 1.5;

@@ -5,3 +5,4 @@ import '../components/Tips';
 import '../components/Weather';
 import '../components/Khutbah';
 import '../components/Slideshow';
+import '../components/Theme';

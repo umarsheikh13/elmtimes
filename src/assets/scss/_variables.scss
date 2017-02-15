@@ -12,13 +12,8 @@ $mq-breakpoints: (
 
 $color-white: #fff;
 $color-black: #000;
-$color-grey-dark: #333;
+$color-grey-dark: #222;
 $color-grey-light: #ccc;
-$theme: (
-    light: $theme,
-    standard: darken($theme, 5%),
-    dark: darken($theme, 10%)
-);
 
 // Structure
 

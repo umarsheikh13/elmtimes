@@ -2,8 +2,8 @@
 .footer {
 
     @include pxrem(font-size, 12px);
-    background-color: map-get($theme, light);
-    border-top: 1px solid map-get($theme, dark);
+    border-top-width: 1px;
+    border-top-style: solid;
     text-align: center;
     padding: 15px 0;
 
@@ -70,7 +70,6 @@
     @include mq($from: tablet) {
         @include clearfix;
         @include pxrem(line-height, 50px);
-        background-color: map-get($theme, dark);
         border-top: 0 none;
         position: fixed;
         bottom: 0;

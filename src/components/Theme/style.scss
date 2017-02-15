@@ -1,0 +1,21 @@
+@import '~sass-mq/mq';
+
+.theme {
+
+    display: none;
+
+    a {
+        margin: 0 20px 20px 20px;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    a, &.active {
+        display: block;
+    }
+
+    @include mq($from: tablet) {
+        display: none;
+    }
+
+}

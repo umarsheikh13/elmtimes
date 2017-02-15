@@ -10,7 +10,8 @@
         "Click/tap times to change time format",
         "Website code now on GitHub"
     ],
-    "color": "#95112d",
+    "primarycolor": "#95112d",
+    "secondarycolor": "#34495e",
     "latitude": 51.517383,
     "longitude": -0.065015,
     "gaid": "UA-55211110-1",
