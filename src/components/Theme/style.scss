@@ -15,7 +15,11 @@
     }
 
     @include mq($from: tablet) {
-        display: none;
+
+        &, &.active {
+            display: none;
+        }
+
     }
 
 }
