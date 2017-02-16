@@ -80,7 +80,7 @@ export default {
     const e = d.documentElement;
     const g = d.getElementsByTagName('body')[0];
     const x = w.innerWidth || e.clientWidth || g.clientWidth;
-    return width <= x;
+    return x <= width;
   },
 
   /**
