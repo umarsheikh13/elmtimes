@@ -1,3 +1,4 @@
-import './test-timetable'
-import './test-weather'
-import './test-youtube'
+import './test-config';
+import './test-timetable';
+import './test-weather';
+import './test-youtube';

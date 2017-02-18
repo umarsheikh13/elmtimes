@@ -38,9 +38,9 @@ class Theme extends preact.Component {
     }
   }
 
-  render(props, state) {
+  render() {
     return (
-      <div className={`theme${(state.hasSecondary) ? ' active' : ''}`}>
+      <div className="theme">
         <a onClick={e => this.switchTheme(e)}>Switch colour</a>
       </div>
     );
