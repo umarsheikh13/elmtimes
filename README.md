@@ -129,6 +129,8 @@ If you want to contribute to this repo you'll want to run the dev server which y
 yarn run dev
 ```
 
+You can then visit [http://localhost:8080/](http://localhost:8080/).
+
 ## Contributing
 
 1. Fork it!
