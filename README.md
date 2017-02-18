@@ -121,6 +121,14 @@ favicon.ico
 index.html
 ```
 
+## Development
+
+If you want to contribute to this repo you'll want to run the dev server which you can do by running:
+
+```
+yarn run dev
+```
+
 ## Contributing
 
 1. Fork it!
