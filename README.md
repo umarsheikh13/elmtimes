@@ -1,6 +1,6 @@
 # ELM Times - Single Page Prayer Times Web App
 
-This is a simple single page prayer times web app built using Preact and Webpack. It displays the prayer times for a specific mosque including the time, date, current weather (at the mosque's location) and latest video from the mosque's YouTube channel.
+This is a simple single page prayer times web app built using [Preact](https://github.com/developit/preact) and [Webpack](https://github.com/webpack). It displays the prayer times for a specific mosque including the time, date, current weather (at the mosque's location) and latest video from the mosque's YouTube channel.
 
 ## Using ELM Times for your own mosque
 
