@@ -91,8 +91,6 @@ After configuring the app and adding all the assets you're good to go however I 
 
 1. Checks if your `config.json` file contains all the required options
 2. Checks if your timetable CSV file exists and contains all the rows
-3. Checks the weather API if you've set an Open Weather Map API key
-4. The last test checks the YouTube API if you've set the API key. This will only work if your key is unrestricted.
 
 You can run all the tests by running:
 
