@@ -1,5 +1,5 @@
 {
-  "name": "k8-webapp",
+  "name": "elmtimes",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -27,7 +27,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
-    "extract-text-webpack-plugin": "beta",
+    "extract-text-webpack-plugin": "2.0.0",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.26.0",
     "image-webpack-loader": "^3.1.0",
