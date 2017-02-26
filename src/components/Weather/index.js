@@ -30,7 +30,7 @@ class Weather extends preact.Component {
 
     // Retrieve video details from cache
 
-    if (cachedTemp) {
+    if (cachedTemp && process.env.NODE_ENV !== 'development') {
       this.setState({
         temp: cachedTemp,
         cond: cachedCond

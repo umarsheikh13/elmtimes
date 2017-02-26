@@ -31,7 +31,7 @@ class Khutbah extends preact.Component {
 
     // Retrieve video details from cache
 
-    if (cachedTitle) {
+    if (cachedTitle && process.env.NODE_ENV !== 'development') {
       this.setState({
         title: cachedTitle,
         video: cachedVideo
@@ -59,7 +59,7 @@ class Khutbah extends preact.Component {
                   !(/bangla/i).test(ytVideo.snippet.title) &&
                   title === ''
                 ) {
-                title = ytVideo.snippet.title.match(/([^|]*)$/)[0];
+                title = ytVideo.snippet.title.match(/([^|]+)/g)[2].trim();
                 video = ytVideo.id.videoId;
               }
             });

@@ -47,7 +47,7 @@
     "test": "NODE_ENV='test' mocha tests --compilers js:babel-core/register --timeout 10000",
     "build": "NODE_ENV='production' webpack -p",
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server --content-base ./ --inline"
+    "dev": "NODE_ENV='development' webpack-dev-server --content-base ./ --inline"
   },
   "author": "",
   "license": "MIT"
