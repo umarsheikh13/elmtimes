@@ -1,4 +1,5 @@
 import preact from 'preact';
+import Axios from 'axios';
 import Config from '../../../config.json';
 import Helpers from '../../helpers';
 import './style.scss';
@@ -39,40 +40,39 @@ class Khutbah extends preact.Component {
     } else {
       // Get latest video from API
 
-      fetch(endpoint, {
-        method: 'get',
-      })
-      .then(resp => resp.json())
-      .then((data) => {
-        const videos = data.items;
-        if (videos.length) {
-          let title = data.items[0].snippet.title;
-          let video = data.items[0].id.videoId;
+      Axios.get(endpoint)
+        .then((res) => {
+          const data = res.data;
+          const videos = data.items;
 
-          // Skip Bangla khutbah
+          if (videos.length) {
+            let title = data.items[0].snippet.title;
+            let video = data.items[0].id.videoId;
 
-          if (Config.ELM) {
-            title = '';
-            videos.forEach((ytVideo) => {
-              if (
-                  (/khutbah/i).test(ytVideo.snippet.title) &&
-                  !(/bangla/i).test(ytVideo.snippet.title) &&
-                  title === ''
-                ) {
-                title = ytVideo.snippet.title.match(/([^|]+)/g)[2].trim();
-                video = ytVideo.id.videoId;
-              }
-            });
+            // Skip Bangla khutbah
+
+            if (Config.ELM) {
+              title = '';
+              videos.forEach((ytVideo) => {
+                if (
+                    (/khutbah/i).test(ytVideo.snippet.title) &&
+                    !(/bangla/i).test(ytVideo.snippet.title) &&
+                    title === ''
+                  ) {
+                  title = ytVideo.snippet.title.match(/([^|]+)/g)[2].trim();
+                  video = ytVideo.id.videoId;
+                }
+              });
+            }
+
+            // Save to cache and set states
+
+            Helpers.storageSet('video_title', title, 60 * 60 * 24);
+            Helpers.storageSet('video_id', video, 60 * 60 * 24);
+
+            this.setState({ title, video });
           }
-
-          // Save to cache and set states
-
-          Helpers.storageSet('video_title', title, 60 * 60 * 24);
-          Helpers.storageSet('video_id', video, 60 * 60 * 24);
-
-          this.setState({ title, video });
-        }
-      });
+        });
     }
   }
 

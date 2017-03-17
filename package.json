@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
+    "axios": "^0.15.3",
     "normalize.css": "^5.0.0",
     "papaparse": "^4.1.4",
     "preact": "^7.1.0"
@@ -11,7 +12,6 @@
   "devDependencies": {
     "@epegzz/sass-vars-loader": "^1.0.3",
     "autoprefixer": "^6.6.1",
-    "axios": "^0.15.3",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
