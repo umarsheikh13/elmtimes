@@ -49,6 +49,6 @@
     "watch": "webpack --watch",
     "dev": "NODE_ENV='development' webpack-dev-server --content-base ./ --inline"
   },
-  "author": "",
+  "author": "umarsheikh13 <hello@umarsheikh.co.uk> (http://umarsheikh.co.uk)",
   "license": "MIT"
 }
