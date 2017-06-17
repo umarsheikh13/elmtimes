@@ -91,12 +91,15 @@ class PrayerTimes extends preact.Component {
           hourTwenty = timeSplit[0] === 1 ? `0${timeSplit[0]}` : timeSplit[0];
           meridiem = t.meridiem;
         } else if (t.meridiem === 'ampm') {
-          if (parseInt(timeSplit[0], 10) === 11 || parseInt(timeSplit[0], 10) === 12) {
+          if (parseInt(timeSplit[0], 10) === 11) {
+            hourTwenty = timeSplit[0];
+            meridiem = 'am';
+          } else if (parseInt(timeSplit[0], 10) === 12) {
             hourTwenty = timeSplit[0];
             meridiem = 'pm';
-          } else {
+          } else if (parseInt(timeSplit[0], 10) < 11) {
             hourTwenty = 12 + parseInt(timeSplit[0], 10);
-            meridiem = 'am';
+            meridiem = 'pm';
           }
         } else if (t.meridiem === 'pm') {
           hourTwenty = 12 + parseInt(timeSplit[0], 10);
