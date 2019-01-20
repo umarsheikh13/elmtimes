@@ -83,7 +83,7 @@ class Khutbah extends preact.Component {
           <div className="khutbah__inner">
             <h3 className="khutbah__title">{state.title}</h3>
             <div className="video">
-              <iframe width="560" height="315" src={`http://www.youtube.com/embed/${state.video}`} frameBorder="0" allowFullScreen />
+              <iframe width="560" height="315" src={`https://www.youtube.com/embed/${state.video}`} frameBorder="0" allowFullScreen />
             </div>
           </div>
         }
