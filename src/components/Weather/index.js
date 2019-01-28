@@ -27,7 +27,7 @@ class Weather extends preact.Component {
   getWeather() {
     const cachedTemp = Helpers.storageGet('weather_temp');
     const cachedCond = Helpers.storageGet('weather_cond');
-    const endpoint = `http://api.openweathermap.org/data/2.5/weather?lat=${Config.latitude}&lon=${Config.longitude}&units=metric&APPID=${Config.owmapikey}&${Helpers.cacheBust('hourly')}`;
+    const endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${Config.latitude}&lon=${Config.longitude}&units=metric&APPID=${Config.owmapikey}&${Helpers.cacheBust('hourly')}`;
 
     // Retrieve video details from cache
 
