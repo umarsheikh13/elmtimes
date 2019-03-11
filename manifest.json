@@ -28,7 +28,7 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": "/elmtimes/",
+    "start_url": "/",
     "background_color": "#95112d",
     "display": "standalone",
     "theme_color": "#95112d",
