@@ -1,22 +1,10 @@
 {
-    "title": "ELM Times",
-    "tagline": "Unofficial Website for East London Mosque Prayer Times",
-    "description": "Provides a quick and easy way to view the current day's prayer times for East London Mosque.",
-    "keywords": "east london mosque, east london masjid, east london, mosque, masjid, london, prayer times, prayer, salah",
-    "domain": "elmtimes.com",
-    "path": "/",
-    "tips": [
-        "Save to your mobile homescreen",
-        "Click/tap times to change time format",
-        "Website code now on GitHub"
-    ],
-    "primarycolor": "#95112d",
-    "secondarycolor": "#34495e",
-    "latitude": 51.517383,
-    "longitude": -0.065015,
+    "theme": "maroon",
+    "noSlides": 3,
+    "sliderSpeed": 5,
+    "about": "<p>This website allows you to view East London Mosque's prayer times quickly and easily from both desktop and mobile browsers.</p><p>We like to thank you for using ELM Times, if you find it useful please share it with friends and family. If you experience any issues then please get in touch by contacting Umar via <a href='mailto:hello@umarsheikh.co.uk'>email</a> or <a href='https://twitter.com/umarsheikh' target='_blank' rel='noopener noreferrer'>twitter</a>.</p><p>If you would like to use this web app for your own mosque, the code is available on <a href='https://github.com/umarsheikh13/elmtimes' target='_blank' rel='noopener noreferrer'>GitHub</a>.</p>",
+    "youTubeKey": "AIzaSyAMTMaHNGZgyoUDy6HDgncHHFThrWkShyo",
+    "youTubeChannelId": "UCvLvAfXrrWkWITIAIfrwOtQ",
     "gaid": "UA-134866480-1",
-    "owmapikey": "631c50768d51fc9922b171cd00c71cde",
-    "channelid": "UCvLvAfXrrWkWITIAIfrwOtQ",
-    "ytapikey": "AIzaSyAMTMaHNGZgyoUDy6HDgncHHFThrWkShyo",
-    "ELM": true
+    "elm": true
 }

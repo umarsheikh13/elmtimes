@@ -1,20 +1,19 @@
+
+/* eslint-disable */
+
 import { expect } from 'chai';
 import Config from '../config.json';
 
 describe('Configuration file', () => {
-  it('should exist', () => {
-    expect(Config).to.exist;
-  });
+    it('should exist', () => {
+        expect(Config).to.exist;
+    });
 
-  it('should contain the required fields', () => {
-    expect(Config.title).to.exist;
-    expect(Config.tagline).to.exist;
-    expect(Config.description).to.exist;
-    expect(Config.keywords).to.exist;
-    expect(Config.domain).to.exist;
-    expect(Config.path).to.exist;
-    expect(Config.tips).to.exist;
-    expect(Config.primarycolor).to.exist;
-    expect(Config.gaid).to.exist;
-  });
+    it('should contain the required fields', () => {
+        expect(Config.theme).to.exist;
+        expect(Config.noSlides).to.exist;
+        expect(Config.sliderSpeed).to.exist;
+        expect(Config.about).to.exist;
+        expect(Config.elm).to.exist;
+    });
 });

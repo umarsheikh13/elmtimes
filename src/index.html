@@ -1,97 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
 
-<!-- Force awesomeness -->
-<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta charset="UTF-8">
+<meta name="viewport" content="minimal-ui, initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <!-- Page title -->
-<title><%= htmlWebpackPlugin.options.page.title %> | <%= htmlWebpackPlugin.options.page.tagline %></title>
+<title>ELM Times | Unofficial Website for East London Mosque Prayer Times</title>
 
 <!-- Page meta -->
-<meta name="description" content="<%= htmlWebpackPlugin.options.page.description %>">
-<meta name="keywords" content="<%= htmlWebpackPlugin.options.page.keywords %>">
+<meta name="description" content="Provides a quick and easy way to view the current day's prayer times for East London Mosque.">
+<meta name="keywords" content="east london mosque, east london masjid, east london, mosque, masjid, london, prayer times, prayer, salah">
 
 <!-- Facebook -->
-<meta property="og:title" content="<%= htmlWebpackPlugin.options.page.title %> | <%= htmlWebpackPlugin.options.page.tagline %>">
+<meta property="og:title" content="ELM Times | Unofficial Website for East London Mosque Prayer Times">
 <meta property="og:type" content="website">
-<meta property="og:image" content="http://<%= htmlWebpackPlugin.options.page.domain %><%= htmlWebpackPlugin.options.page.path %>assets/social/social.jpg">
-<meta property="og:url" content="http://<%= htmlWebpackPlugin.options.page.domain %><%= htmlWebpackPlugin.options.page.path %>">
-<meta property="og:description" content="<%= htmlWebpackPlugin.options.page.description %>">
-<meta property="og:site_name" content="<%= htmlWebpackPlugin.options.page.title %>">
+<meta property="og:image" content="https://elmtimes.com/assets/social/social.jpg">
+<meta property="og:url" content="http://elmtimes.com/">
+<meta property="og:description" content="Provides a quick and easy way to view the current day's prayer times for East London Mosque.">
+<meta property="og:site_name" content="ELM Times">
 
 <!-- Mobile friendly -->
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="manifest" href="manifest.json">
 
 <!-- Icons -->
 <link rel="shortcut icon" href="assets/icons/favicon.ico">
 <link rel="apple-touch-icon" href="assets/icons/icon.png">
-<link rel="icon" href="assets/icons/icon.png">
-<link rel="apple-touch-icon" sizes="144x144" href="assets/icons/icon-144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/icon-152.png">
 <link rel="apple-touch-icon" sizes="167x167" href="assets/icons/icon-167.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png">
-<link rel="icon" sizes="144x144" href="assets/icons/icon-144.png">
-<link rel="icon" sizes="152x152" href="assets/icons/icon-152.png">
-<link rel="icon" sizes="167x167" href="assets/icons/icon-167.png">
-<link rel="icon" sizes="180x180" href="assets/icons/icon-180.png">
-
-<!-- Polyfill -->
-<script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<link rel="apple-touch-icon" sizes="192x192" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="assets/icons/icon-512.png">
+<link rel="icon" href="assets/icons/icon.png">
+<link rel="icon" sizes="192x192" href="assets/icons/icon-192.png">
+<link rel="icon" sizes="512x512" href="assets/icons/icon-512.png">
 
 </head>
-
 <body>
-
-<main class="wrapper">
-    <header class="header">
-        <h1>
-            <a href="./" title="<%= htmlWebpackPlugin.options.page.title %>">
-                <img src="assets/logos/logo.png" srcset="assets/logos/logo@2x.png 2x, assets/logos/logo@3x.png 3x" alt="<%= htmlWebpackPlugin.options.page.title %>">
-            </a>
-        </h1>
-    </header>
-    <section class="content">
-        <div id="time-container"></div>
-        <div id="prayer-times-container"></div>
-        <div id="khutbah-container"></div>
-    </section>
-    <footer class="footer">
-        <div id="tips-container"></div>
-    </footer>
-</main>
-
-<footer class="footer-bottom">
-    <div id="theme-container"></div>
-    <div class="footer-bottom__left">&copy;<script>document.write(new Date().getFullYear())</script> <%= htmlWebpackPlugin.options.page.domain %></div>
-    <div class="footer-bottom__right">Source code on <a title="Umar Sheikh" href="https://github.com/umarsheikh13/elmtimes" target="_blank">GitHub</a></div>
-</footer>
-
-<section id="weather-container" class="weather"></section>
-<section id="slideshow-container" class="slideshow"></section>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=<%= htmlWebpackPlugin.options.page.gaid %>"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '<%= htmlWebpackPlugin.options.page.gaid %>');
-</script>
-
-<!-- Google Fonts -->
-<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-<script>
+<div id="app"></div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script type="text/javascript">
 WebFont.load({
     google: {
-        families: ['Open Sans:300,400,700']
+        families: ['Open Sans:400,600']
     }
 });
 </script>
 </body>
-
 </html>

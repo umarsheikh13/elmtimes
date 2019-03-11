@@ -2,63 +2,77 @@
 
 # ELM Times - Single Page Prayer Times Web App
 
-This is a simple single page prayer times web app built using [Preact](https://github.com/developit/preact) and [Webpack](https://github.com/webpack). It displays the prayer times for a specific mosque including the time, date, current weather (at the mosque's location) and latest video from the mosque's YouTube channel.
+This is a simple single page prayer times web app built using [Preact](https://github.com/developit/preact) and [Webpack](https://github.com/webpack). It displays the prayer times for a specific mosque including the time, date and latest video from the mosque's YouTube channel.
 
 ## Using ELM Times for your own mosque
 
 Feel free to use the code for your own mosque by following the steps below.
 
+## Version 2.0
+
+ELM Times has been rewritten in version 2.0 so there will be some breaking changes if you're currently using the previous version. In this version we've made it even easier to get up and running without having any development knowledge.
+
 ## Installation
 
 1. [Download the code](#1-download-the-code)
-2. [Install packages](#2-install-packages)
-3. [Configure details](#3-configure-details)
-4. [Add assets](#4-add-assets)
-5. [Testing](#5-testing)
-6. [Build it](#6-build-it)
+2. [Update config.json](#2-update-config-json)
+3. [Update index.html](#3-update-index-html)
+4. [Update manifest.json](#4-update-manifest-json)
+5. [Add assets](#5-add-assets)
+6. [Upload files](#6-upload-files)
 
 ### 1. Download the code
 
 Get the ELM Times codebase by cloning this repo or [downloading the zip](https://github.com/umarsheikh13/elmtimes/archive/master.zip) and extracting it.
 
-### 2. Install packages
+### 2. Update config.json
 
-Go to the [Node.js](https://nodejs.org/en/) website and download the LTS package. Once downloaded, run the installer and you're done. Open up command prompt (Windows) or terminal (OSX), navigate to the project folder and then run:
+Open the `config.json` file in a text editor and update the options for your mosque.
 
-```
-npm install -g yarn
-```
-
-Then install all the packages by running:
-
-```
-yarn
-```
-
-### 3. Configure details
-
-Edit the `config.json` file and change the options accordingly (see file for examples).
-
-Option | Type | Required | Description
+Option | Values | Description
 --- | --- | --- | ---
-*title* | `string` | Yes | The title of the app
-*tagline* | `string` | Yes | The tagline of the app
-*description* | `string` | Yes | The description of the app (used for SEO)
-*keywords* | `string` | Yes | The keywords for the app (used for SEO)
-*domain* | `string` | Yes | The domain name
-*path* | `string` | Yes | If you're app lives in a subdirectory like `elmtimes.com/app` then set it as `"/app/"` otherwise use `"/"`
-*tips* | `array` | Yes | These are the tips shown to the user in the footer. We recommend keeping the first 2 in the list.
-*primarycolor* | `string` | Yes | The main app colour in hex code
-*gaid* | `string` | Yes | Your Google Analytics UA ID
-*secondarycolor* | `string` | No | The secondary app colour the user can switch to
-*latitude* | `float` | No | The latitude of the mosque's location. Required if `owmapikey` is set.
-*longitude* | `float` | No | The longitude of the mosque's location. Required if `owmapikey` is set.
-*owmapikey* | `string` | No | Your [Open Weather Map](https://openweathermap.org/) API key
-*channelid* | `string` | No | Your YouTube channel ID. Required if `ytapikey` is set
-*ytapikey* | `string` | No | Your [Google API Key](https://console.developers.google.com/) used to
-*ELM* | `boolean` | No | This is only used if you're fetching East London Mosque's YouTube feed
+`theme` | maroon, navy, teal, purple | (*Required*) The colour theme for the app
+`noSlides` | integer | (*Required*) The number of slides for the desktop version e.g. 3
+`sliderSpeed` | integer | (*Required*) The speed of the slider in seconds e.g. 3
+`aboutTitle` | string | (*Optional*) The title for the About page
+`about` | string | (*Required*) The html content for the About page
+`youtubeKey` | string | (*Optional*) The YouTube [api key](https://console.cloud.google.com/apis/library/youtube.googleapis.com)
+`youTubeChannelId` | string | (*Optional*) The YouTube channel ID. Required if youtubeKey has been set.
+`gaid` | string | (*Optional*) Your Google Analytics ID
+`elm` | boolean | (*Required*) If you're using ELM's times and functionality then set this as true otherwise false
+`disableAsr2` | boolean | (*Optional*) If your mosque doesn't have the times for Asr Mithl 2 then you can disable it by including this option. You can remove this Asr time from your timetable CSV file.
 
-### 4. Add assets
+### 3. Update index.html
+
+Open the `index.html` file in a text editor and update the meta tags for your mosque.
+
+```
+<!-- Page meta -->
+<meta name="description" content="...">
+<meta name="keywords" content="...">
+
+<!-- Facebook -->
+<meta property="og:title" content="...">
+<meta property="og:image" content="...">
+<meta property="og:url" content="...">
+<meta property="og:description" content="...">
+<meta property="og:site_name" content="...">
+```
+
+### 4. Update manifest.json
+
+This file allows your users to save the web app to their mobile homescreens and let them use the app offline.
+
+Option | Values | Description
+--- | --- | --- | ---
+`short_name` | string | (*Required*) The name under the app icon so make it short e.g. ELM
+`name` | string | (*Required*) The website name e.g. East London Mosque
+`background_color` | string | The hex colour for the app e.g. #95112d
+`theme_color` | string | The hex colour for the app e.g. #95112d
+
+If you want to match the `background_color` and `theme_color` with the prayer times theme colour then have a look at the colour codes in `src/scss/_variables.scss`.
+
+### 5. Add assets
 
 All the images live in subdirectories inside the root `assets` folder:
 
@@ -66,11 +80,23 @@ Folder | Description | Files
 --- | --- | ---
 `icons` | Contains the app icons used for mobile homescreens | Replace all the images in this folder using the same filenames
 `logos` | Contains the logo images in 3 different sizes | Replace all the images in this folder using the same filenames
-`slides` | Contains the slideshow images used for desktop browsers | You can add any number of images in this folder and the filenames can be anything. They will be displayed in alphabetical order according to filename.
+`slides` | Contains the slideshow images used for desktop browsers | You can add any number of images in this folder and the filenames should follow this style `slide-n.jpg` where `n` is the number of the slide. They will be displayed in alphabetical order according to filename.
 `social` | Contains the thumbnail used when sharing a link on social media (i.e. Facebook) | Replace the image keeping the same filename
 `timetables` | Contains the prayer times in comma delimited CSV format | See below for more information
 
-#### Timetables
+### 6. Upload files
+
+Once you're done with the above steps then all you need to do is upload the following files and folders to your web hosting server:
+
+- /assets
+- /css
+- /js
+- config.json
+- index.html
+- manifest.json
+- service-worker.js
+
+## Timetables
 
 The timetables should go into the `assets/timetables` folder and should meet the following requirements:
 
@@ -87,49 +113,15 @@ Example:
 
 `2,9,5.45,6.15,7.22,12.20,12.45,2.38,3.16,3.45,5.08,5.13,6.39,7.15`
 
-### 5. Test the code
+## Developers
 
-After configuring the app and adding all the assets you're good to go however I suggest running some tests to see if everything's in working order. See below for more information:
+As mentioned above this app has been developed using preact/webpack. Follow these steps to get started:
 
-1. Checks if your `config.json` file contains all the required options
-2. Checks if your timetable CSV file exists and contains all the rows
-
-You can run all the tests by running:
-
-```
-yarn run test
-```
-
-### 6. Build the app
-
-The final step is to actually build the app, go ahead and do that by running:
-
-```
-yarn run build
-```
-
-If you just want to transfer the static files to a hosting server you'll need the following files after your build:
-
-```
-/assets
-/css
-/fonts
-/img
-/js
-config.json
-favicon.ico
-index.html
-```
-
-## Development
-
-If you want to contribute to this repo you'll want to run the dev server which you can do by running:
-
-```
-yarn run dev
-```
-
-You can then visit [http://localhost:8080/](http://localhost:8080/).
+1. Install yarn globally: `npm install -g yarn`
+2. Install dependencies: `yarn`
+3. Run the dev server [http://localhost:8080](http://localhost:8080): `yarn dev`
+4. To make a build run: `yarn build`
+5. To test run: `yarn test`
 
 ## Contributing
 
