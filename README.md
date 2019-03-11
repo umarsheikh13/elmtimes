@@ -29,18 +29,18 @@ Get the ELM Times codebase by cloning this repo or [downloading the zip](https:/
 
 Open the `config.json` file in a text editor and update the options for your mosque.
 
-Option | Values | Description
---- | --- | ---
-`theme` | maroon, navy, teal, purple | (*Required*) The colour theme for the app
-`noSlides` | integer | (*Required*) The number of slides for the desktop version e.g. 3
-`sliderSpeed` | integer | (*Required*) The speed of the slider in seconds e.g. 3
-`aboutTitle` | string | (*Optional*) The title for the About page
-`about` | string | (*Required*) The html content for the About page
-`youtubeKey` | string | (*Optional*) The YouTube [api key](https://console.cloud.google.com/apis/library/youtube.googleapis.com)
-`youTubeChannelId` | string | (*Optional*) The YouTube channel ID. Required if youtubeKey has been set.
-`gaid` | string | (*Optional*) Your Google Analytics ID
-`elm` | boolean | (*Required*) If you're using ELM's times and functionality then set this as true otherwise false
-`disableAsr2` | boolean | (*Optional*) If your mosque doesn't have the times for Asr Mithl 2 then you can disable it by including this option. You can remove this Asr time from your timetable CSV file.
+Option | Value | Requirement | Description
+--- | --- | --- | ---
+`theme` | maroon, navy, teal, purple | Required | The colour theme for the app
+`noSlides` | integer | Required | The number of slides for the desktop version e.g. 3
+`sliderSpeed` | integer | Required | The speed of the slider in seconds e.g. 3
+`aboutTitle` | string | Optional | The title for the About page
+`about` | string | Required | The html content for the About page
+`youtubeKey` | string | Optional | The YouTube [api key](https://console.cloud.google.com/apis/library/youtube.googleapis.com)
+`youTubeChannelId` | string | Optional | The YouTube channel ID. Required if youtubeKey has been set.
+`gaid` | string | Optional | Your Google Analytics ID
+`elm` | boolean | Required | If you're using ELM's times and functionality then set this as true otherwise false
+`disableAsr2` | boolean | Optional | If your mosque doesn't have the times for Asr Mithl 2 then you can disable it by including this option. You can remove this Asr time from your timetable CSV file.
 
 ### 3. Update index.html
 
@@ -63,10 +63,10 @@ Open the `index.html` file in a text editor and update the meta tags for your mo
 
 This file allows your users to save the web app to their mobile homescreens and let them use the app offline.
 
-Option | Values | Description
+Option | Value | Description
 --- | --- | ---
-`short_name` | string | (*Required*) The name under the app icon so make it short e.g. ELM
-`name` | string | (*Required*) The website name e.g. East London Mosque
+`short_name` | string | The name under the app icon so make it short e.g. ELM
+`name` | string | The website name e.g. East London Mosque
 `background_color` | string | The hex colour for the app e.g. #95112d
 `theme_color` | string | The hex colour for the app e.g. #95112d
 
