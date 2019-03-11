@@ -1,0 +1,27 @@
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: pxrem(16px);
+    background-color: $color-gray-900;
+    color: $color-white;
+}
+
+a, button {
+    transition: $transition-speed;
+}
+
+.theme-maroon .body {
+    background-color: $color-theme-maroon;
+}
+
+.theme-navy .body {
+    background-color: $color-theme-navy;
+}
+
+.theme-teal .body {
+    background-color: darken($color-theme-teal, 15%);
+}
+
+.theme-purple .body {
+    background-color: darken($color-theme-purple, 15%);
+}

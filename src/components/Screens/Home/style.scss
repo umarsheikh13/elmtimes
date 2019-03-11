@@ -1,0 +1,210 @@
+@import '../../../scss/functions';
+@import '../../../scss/variables';
+
+.screen-home {
+
+    &__time {
+        background-color: rgba(0, 0, 0, 0.02);
+        background-image: url('../../../img/pattern.svg');
+        background-position: center;
+        background-size: 25%;
+        height: 21vh;
+        position: relative;
+    }
+
+    &__date-time {
+
+        position: absolute;
+        width: 70%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h1, p {
+            margin: 0;
+        }
+
+        h1 {
+
+            text-shadow: 0.5vh 0.5vh 0 rgba(0, 0, 0, 0.3);
+            font-size: 8vh;
+            line-height: 8vh;
+
+            span {
+                display: inline-block;
+                vertical-align: bottom;
+            }
+
+        }
+
+        p {
+            font-size: 2.8vh;
+            line-height: 5vh;
+        }
+
+    }
+
+    &__time-postfix {
+        font-size: 3vh;
+        line-height: 4vh;
+        margin-left: 5px;
+    }
+
+    &__prev-next {
+
+        background-color: rgba(0, 0, 0, 0.15);
+        display: block;
+        height: 7vh;
+        width: pxrem(40px);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:after {
+            content: "";
+            display: block;
+            height: pxrem(12px);
+            width: pxrem(12px);
+            border-top: 2px solid $color-white;
+            border-left: 2px solid $color-white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    &__prev {
+
+        border-radius: 0 pxrem(6px) pxrem(6px) 0;
+        left: 0;
+
+        &:after {
+            transform: translate(-40%, -50%) rotate(-45deg);
+        }
+
+    }
+
+    &__next {
+
+        border-radius: pxrem(6px) 0 0 pxrem(6px);
+        right: 0;
+
+        &:after {
+            transform: translate(-60%, -50%) rotate(135deg);
+        }
+
+    }
+
+    &__prayer-times {
+
+        text-align: center;
+
+        ul {
+
+            margin: 0;
+            padding: 0;
+
+            li {
+
+                height: 9vh;
+                color: rgba(255, 255, 255, 0.4);
+
+                &.is-active {
+                    color: rgba(255, 255, 255, 1);
+                }
+
+                span {
+
+                    height: 100%;
+                    font-size: 3vh;
+                    line-height: 9vh;
+                    display: inline-block;
+
+                    &:nth-child(1) {
+                        background-color: rgba(0, 0, 0, 0.5);
+                        width: 34%;
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        width: (100% - 34%) / 2;
+                    }
+
+                    &:nth-child(2) {
+                        background-color: rgba(0, 0, 0, 0.3);
+                    }
+
+                    &:nth-child(3) {
+                        background-color: rgba(0, 0, 0, 0.1);
+                    }
+
+                }
+
+                &:first-child {
+
+                    height: 7vh;
+                    color: $color-white;
+
+                    span {
+
+                        line-height: 7.2vh;
+                        font-size: 2.5vh;
+
+                        &:nth-child(2),
+                        &:nth-child(3) {
+                            text-transform: uppercase;
+                            font-weight: bold;
+                        }
+
+                    }
+
+                }
+
+                &:last-child {
+
+                    span {
+                        border-bottom: 0 none;
+                    }
+
+                }
+
+                @for $i from 1 through 8 {
+                    &:nth-child(#{$i}) {
+                        span {
+                            &:nth-child(1) {
+                                background-color: rgba(0, 0, 0, ($i * 0.08) + 0.07);
+                            }
+                            &:nth-child(2) {
+                                background-color: rgba(0, 0, 0, ($i * 0.06) + 0.05);
+                            }
+                            &:nth-child(3) {
+                                background-color: rgba(0, 0, 0, ($i * 0.04) + 0.03);
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        &--no-asr2 {
+
+            ul li:not(:first-child) {
+
+                height: 10.5vh;
+
+                span {
+                    line-height: 11vh;
+                }
+
+            }
+
+        }
+
+    }
+
+}

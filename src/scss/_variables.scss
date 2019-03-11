@@ -1,0 +1,31 @@
+
+// Breakpoints
+
+$mq-breakpoints: (
+    mobile: 576,
+    tablet: 768px,
+    desktop: 992px,
+    wide: 1200px
+);
+
+// Colour
+
+$color-white: #fff;
+$color-gray-100: #f8f9fa;
+$color-gray-200: #e9ecef;
+$color-gray-300: #dee2e6;
+$color-gray-400: #ced4da;
+$color-gray-500: #adb5bd;
+$color-gray-600: #6c757d;
+$color-gray-700: #495057;
+$color-gray-800: #343a40;
+$color-gray-900: #212529;
+$color-black: #000;
+$color-theme-maroon: #95112d;
+$color-theme-navy: #34495e;
+$color-theme-teal: #16a085;
+$color-theme-purple: #8e44ad;
+
+// Motion
+
+$transition-speed: 0.25s;

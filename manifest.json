@@ -1,0 +1,36 @@
+{
+    "short_name": "ELM",
+    "name": "ELM Times",
+    "icons": [
+        {
+            "src": "assets/icons/icon-152.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "assets/icons/icon-167.png",
+            "type": "image/png",
+            "sizes": "167x167"
+        },
+        {
+            "src": "assets/icons/icon-180.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "assets/icons/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "assets/icons/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/elmtimes/",
+    "background_color": "#95112d",
+    "display": "standalone",
+    "theme_color": "#95112d",
+    "orientation": "portrait"
+}

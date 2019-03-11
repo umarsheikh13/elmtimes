@@ -1,0 +1,41 @@
+@import '../../../scss/functions';
+@import '../../../scss/variables';
+
+.settings {
+
+    &__field {
+
+        margin-bottom: 20px;
+
+        &--right {
+            text-align: right;
+        }
+
+        select,
+        button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: pxrem(15px) pxrem(20px);
+            border-radius: 0;
+            width: 100%;
+            border: 0 none;
+            color: $color-white;
+        }
+
+        button {
+            background-color: $color-white;
+            font-weight: bold;
+            width: auto;
+            color: $color-gray-900;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+    }
+
+}

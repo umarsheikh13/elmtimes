@@ -1,0 +1,72 @@
+@import '../../scss/functions';
+@import '../../scss/variables';
+@import '~sass-mq';
+
+.slider {
+
+    background-color: $color-gray-900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 40%;
+    display: none;
+    z-index: 1;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+    }
+
+    &:after {
+        background-image: url('../../img/pattern.svg');
+        background-position: center;
+        background-size: 15%;
+        top: 5%;
+        right: 5%;
+        bottom: 5%;
+        left: 5%;
+    }
+
+    ul {
+
+        margin: 0;
+        padding: 0;
+
+        li {
+
+            transition: $transition-speed * 2;
+            background-position: center;
+            background-size: cover;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+
+            &.is-active {
+                opacity: 1;
+                z-index: 2;
+            }
+
+        }
+
+    }
+
+    @include mq($from: tablet) {
+        display: block;
+    }
+
+    @include mq($from: desktop) {
+        display: block;
+    }
+
+}
