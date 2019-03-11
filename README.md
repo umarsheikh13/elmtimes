@@ -30,7 +30,7 @@ Get the ELM Times codebase by cloning this repo or [downloading the zip](https:/
 Open the `config.json` file in a text editor and update the options for your mosque.
 
 Option | Values | Description
---- | --- | --- | ---
+--- | --- | ---
 `theme` | maroon, navy, teal, purple | (*Required*) The colour theme for the app
 `noSlides` | integer | (*Required*) The number of slides for the desktop version e.g. 3
 `sliderSpeed` | integer | (*Required*) The speed of the slider in seconds e.g. 3
@@ -64,7 +64,7 @@ Open the `index.html` file in a text editor and update the meta tags for your mo
 This file allows your users to save the web app to their mobile homescreens and let them use the app offline.
 
 Option | Values | Description
---- | --- | --- | ---
+--- | --- | ---
 `short_name` | string | (*Required*) The name under the app icon so make it short e.g. ELM
 `name` | string | (*Required*) The website name e.g. East London Mosque
 `background_color` | string | The hex colour for the app e.g. #95112d
