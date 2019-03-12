@@ -59,6 +59,7 @@ export default class Home extends preact.Component {
                 }
             }
         };
+        this.todaysDate = this.state.date;
 
         // Save the settings
 
@@ -189,7 +190,9 @@ export default class Home extends preact.Component {
                         </h1>
                         <p>{ state.date }</p>
                     </div>
-                    <a className="screen-home__prev-next screen-home__prev" onClick={() => this.changeTimesDate('prev')} role="button"></a>
+                    {this.todaysDate !== state.date &&
+                        <a className="screen-home__prev-next screen-home__prev" onClick={() => this.changeTimesDate('prev')} role="button"></a>
+                    }
                     <a className="screen-home__prev-next screen-home__next" onClick={() => this.changeTimesDate('next')} role="button"></a>
                 </div>
                 <div className={`screen-home__prayer-times${('disableAsr2' in props.options) ? ' screen-home__prayer-times--no-asr2' : ''}`}>
