@@ -6,10 +6,10 @@ import Functions from '../../../helpers/Functions';
 import './style.scss';
 
 export default class Home extends preact.Component {
-    constructor() {
+    constructor(props) {
         super();
         const timeFormat = Functions.storageGet('timeFormat') || '24hour';
-        const theme = Functions.storageGet('theme') || 'maroon';
+        const theme = Functions.storageGet('theme') || props.options.theme;
         this.pt = null;
         this.date = new Date();
         this.state = {

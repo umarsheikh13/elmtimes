@@ -38,7 +38,10 @@ export default class Body extends preact.Component {
 
         // Remove the videos screen if the youtube key isn't set
 
-        if (!('youTubeKey' in this.props.options)) {
+        if (
+            !('youTubeKey' in this.props.options) ||
+            ('youTubeKey' in this.props.options && this.props.options.youTubeKey.length === 0)
+        ) {
             this.screens.splice(2, 1);
         }
         this.state = {
