@@ -36,7 +36,7 @@ Option | Value | Requirement | Description
 `sliderSpeed` | integer | Required | The speed of the slider in seconds e.g. 3
 `aboutTitle` | string | Optional | The title for the About page
 `about` | string | Required | The html content for the About page
-`youtubeKey` | string | Optional | The YouTube [api key](https://console.cloud.google.com/apis/library/youtube.googleapis.com)
+`youtubeKey` | string | Optional | The YouTube [api key](https://console.cloud.google.com/apis/library/youtube.googleapis.com). If you do not include this option the "Videos" page will be removed.
 `youTubeChannelId` | string | Optional | The YouTube channel ID. Required if youtubeKey has been set.
 `gaid` | string | Optional | Your Google Analytics ID
 `elm` | boolean | Required | If you're using ELM's times and functionality then set this as true otherwise false
