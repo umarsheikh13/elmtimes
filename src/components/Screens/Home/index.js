@@ -136,21 +136,29 @@ export default class Home extends preact.Component {
      */
     getCurrentDate() {
         const months = [
-            'January',
-            'February',
-            'March',
-            'April',
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
             'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December'
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec'
         ];
-
-        return `${(this.date.getDate() < 10) ? '0' + this.date.getDate() : this.date.getDate()} ${months[this.date.getMonth()]} ${this.date.getFullYear()}`;
+        const days = [
+            'Sun',
+            'Mon',
+            'Tue',
+            'Wed',
+            'Thu',
+            'Fri',
+            'Sat'
+        ];
+        return `${days[this.date.getDay()]} ${(this.date.getDate() < 10) ? '0' + this.date.getDate() : this.date.getDate()} ${months[this.date.getMonth()]} ${this.date.getFullYear()}`;
     }
 
     /**
