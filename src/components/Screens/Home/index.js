@@ -173,7 +173,7 @@ export default class Home extends preact.Component {
         let time = '';
 
         if (timeFormat == '12hour') {
-            hours = hours - 12;
+            hours = (hours > 12) ? hours - 12 : hours;
             time = `${(hours < 10) ? '0' + hours : hours}.${(minutes < 10) ? '0' + minutes : minutes}`;
         } else {
             time = `${(hours < 10) ? '0' + hours : hours}.${(minutes < 10) ? '0' + minutes : minutes}`;
