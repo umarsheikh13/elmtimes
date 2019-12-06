@@ -75,7 +75,7 @@ export default class PrayerTimes {
             $.each(t.index, (ti, ii) => {
                 const date = new Date();
                 const timeStr = `${time[ti]}`;
-                const timeSplit = timeStr.split('.');
+                const timeSplit = (((/\./).test(timeStr)) ? timeStr : `${timeStr}.00`).split('.');
                 const minutes = Functions.formatZeroTime(timeSplit[1]);
                 const hourTwelve = timeSplit[0];
 

@@ -1,6 +1,6 @@
 {
   "name": "elmtimes",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "ELM Times - Single Page Prayer Times Web App",
   "main": "index.js",
   "scripts": {
