@@ -8,6 +8,11 @@ This is a simple single page prayer times web app built using [Preact](https://g
 
 Feel free to use the code for your own mosque by following the steps below.
 
+Examples:
+
+- [Coventry Cross Mosque](http://coventrycrossmosque.co.uk/)
+- [Nusratul Islam Masjid](http://nimtimes.com/)
+
 ## Version 2.0
 
 ELM Times has been rewritten in version 2.0 so there will be some breaking changes if you're currently using the previous version. In this version we've made it even easier to get up and running without having any development knowledge.
