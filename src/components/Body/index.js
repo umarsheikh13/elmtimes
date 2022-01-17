@@ -5,6 +5,8 @@ import Home from '../Screens/Home';
 import Videos from '../Screens/Videos';
 import Settings from '../Screens/Settings';
 import About from '../Screens/About';
+import Events from '../Screens/Events';
+import Donations from '../Screens/Donations';
 import './style.scss';
 
 export default class Body extends preact.Component {
@@ -20,6 +22,11 @@ export default class Body extends preact.Component {
                 component: Home
             },
             {
+                id: 'events',
+                title: props.options.eventsTitle || 'Events',
+                component: Events
+            },
+            {
                 id: 'about',
                 title: props.options.aboutTitle || 'About',
                 component: About
@@ -28,6 +35,11 @@ export default class Body extends preact.Component {
                 id: 'videos',
                 title: 'Videos',
                 component: Videos
+            },
+            {
+                id: 'donations',
+                title: 'Donations',
+                component: Donations
             },
             {
                 id: 'settings',
@@ -42,7 +54,7 @@ export default class Body extends preact.Component {
             !('youTubeKey' in this.props.options) ||
             ('youTubeKey' in this.props.options && this.props.options.youTubeKey.length === 0)
         ) {
-            this.screens.splice(2, 1);
+            this.screens.splice(3, 1);
         }
         this.state = {
             screen: 'home',
@@ -91,7 +103,7 @@ export default class Body extends preact.Component {
                         <nav className={`body__nav${(state.menuOpen) ? ' is-open' : ''}`}>
                             <ul>
                                 {this.screens.map(screen => (
-                                    <li className={(state.screen == screen.id) ? ' ' + Classes.active : ''} key={screen.id}><a onClick={e => this.changeScreen(e, screen.id)}>{ screen.title }</a></li>
+                                    <li className={(state.screen == screen.id) ? ' ' + Classes.active : ''} key={screen.id}><a onClick={e => this.changeScreen(e, screen.id)}>{screen.title}</a></li>
                                 ))}
                             </ul>
                         </nav>
