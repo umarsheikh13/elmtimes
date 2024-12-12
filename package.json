@@ -49,7 +49,7 @@
     "cash-dom": "2.3.9",
     "linkstate": "1.1.1",
     "normalize.css": "8.0.1",
-    "papaparse": "4.6.3",
+    "papaparse": "5.2.0",
     "preact": "8.4.2",
     "preact-compat": "3.18.4",
     "react-ga": "2.5.7",
