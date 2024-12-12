@@ -54,6 +54,6 @@
     "preact-compat": "3.18.4",
     "react-ga": "2.5.7",
     "sass-mq": "5.0.0",
-    "underscore": "1.9.1"
+    "underscore": "1.12.1"
   }
 }
